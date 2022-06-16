@@ -49,8 +49,8 @@ def pedestrian_detector(file_path: str, show: bool = True, save: bool = False, o
 
     if save:
         if output_file_path is None:
-            file_name = os.path.splitext(os.path.basename(os.path.normpath(file_path)))[0]
-            output_file_path = os.path.basename(file_name + '_detected.mp4')
+            orig_file_name = os.path.splitext(os.path.basename(os.path.normpath(file_path)))[0]
+            output_file_path = os.path.basename(orig_file_name + '_detected.mp4')
 
         output_frame_rate = _get_frame_rate(video_capture=video_capture)
         out = cv2.VideoWriter(output_file_path,
@@ -63,6 +63,9 @@ def pedestrian_detector(file_path: str, show: bool = True, save: bool = False, o
 
 
 if __name__ == "__main__":
-    my_file_path = os.path.join('data', 'People_Walk.mp4')
-    my_output_file_path = os.path.join('output', 'People_Walk_detected.mp4')
+    my_file_name = 'People_Walk.mp4'  # ['People_Walk2.mp4', 'Woman_Walk.mp4']
+    my_file_path = os.path.join('data', my_file_name)
+    my_output_file_name = os.path.splitext(my_file_name)[0] + '_detected.mp4'
+    my_output_file_path = os.path.join('output', my_output_file_name)
+
     pedestrian_detector(file_path=my_file_path, save=True, output_file_path=my_output_file_path)
