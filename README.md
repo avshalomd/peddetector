@@ -36,3 +36,10 @@ pedestrians_detector(file_path=input_file_path, show=True, save=True)
 `BBOXES_COLOR_RGB`: RGB coded color of the detection bounding boxes (tuple[int, int, int], e.g. (20, 200, 20)/(255, 255, 255))
 
 `TEXT_COLOR_RGB`: RGB coded color of the text on the detection bounding boxes (tuple[int, int, int], e.g. (20, 200, 20)/(255, 255, 255))
+
+## TODOs
+* docs
+* implement Faster-RCNN / YOLO based detectors
+* implement evaluation methodology and metrics (accuracy, fps, etc.)
+* evaluate multiple detectors models
+* unit tests
