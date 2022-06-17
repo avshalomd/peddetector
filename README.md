@@ -26,8 +26,11 @@ pedestrians_detector(file_path=input_file_path, show=True, save=True)
 ## Configs
 ### General (Configs.py)
 `OUTPUT_FRAME_HEIGHT`: frame height used to calculate output video frame size according to original input ratio (int>0 or -1 for original height, e.g. 240/360/720)
+
 `OUTPUT_FRAME_RATE`: output video frame rate (int>0 or -1 for original frame rate, e.g. 24/30/60)
 ### Detectors (detectors/DetectorsConfigs.py)
 `SUPPRESSION_OVERLAP_THRESHOLD`: non-max suppression overlap threshold used by HOGDetector (0.0 < float < 1.0, e.g. 0.3/0.5/0.65)
+
 `BBOXES_COLOR_RGB`: RGB coded color of the detection bounding boxes (tuple[int, int, int], e.g. (20, 200, 20)/(255, 255, 255))
+
 `TEXT_COLOR_RGB`: RGB coded color of the text on the detection bounding boxes (tuple[int, int, int], e.g. (20, 200, 20)/(255, 255, 255))
