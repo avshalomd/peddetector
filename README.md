@@ -10,6 +10,7 @@ Pedestrians detector in video.
 3. `pip install -r requirements.txt`
 
 ### Python Usage
+**Note:** press `q` to quit and terminate detection during processing.
 ```python
 import os
 from PedestriansDetector import pedestrians_detector
