@@ -1,5 +1,6 @@
 # peddetector
 Pedestrian detector in video
+[detection_example]: https://github.com/avshalomd/peddetector/blob/main/data/detection_example.png "Detection example"
 
 ## Quick Start
 ### Windows installation

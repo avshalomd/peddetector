@@ -9,13 +9,13 @@ from detectors.ABSDetector import ABSDetector
 
 
 class HOGDetector(ABSDetector):
+    """ Histogram of Oriented Gradients Pedestrians Detector """
     def __init__(self):
-        # Histogram of Oriented Gradients Detector
+
         self.hog_descriptor = cv2.HOGDescriptor()
         self.hog_descriptor.setSVMDetector(svmdetector=cv2.HOGDescriptor_getDefaultPeopleDetector())
 
     def detect(self, frame: Any) -> Any:
-        # Using Sliding window concept
         bboxes, weights = self.hog_descriptor.detectMultiScale(frame, winStride=(4, 4), padding=(8, 8), scale=1.03)
         bboxes = np.array([[x, y, x + w, y + h] for (x, y, w, h) in bboxes])
         suppressed_detections = non_max_suppression(boxes=bboxes,
