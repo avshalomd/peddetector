@@ -39,8 +39,8 @@ pedestrians_detector(file_path=input_file_path, show=True, save=True)
 `TEXT_COLOR_RGB`: RGB coded color of the text on the detection bounding boxes (tuple[int, int, int], e.g. (20, 200, 20)/(255, 255, 255))
 
 ## TODOs
-* docs
-* implement Faster-RCNN / YOLO based detectors
+* implement Faster-RCNN / YOLO based detectors [option 1](https://github.com/open-mmlab/mmtracking) [option 2](https://github.com/deepakcrk/yolov5-crowdhuman)
 * implement evaluation methodology and metrics (accuracy, fps, etc.)
 * evaluate multiple detectors models
+* results visualization system
 * unit tests

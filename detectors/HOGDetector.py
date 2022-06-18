@@ -9,13 +9,37 @@ from detectors.ABSDetector import ABSDetector
 
 
 class HOGDetector(ABSDetector):
-    """ Histogram of Oriented Gradients Pedestrians Detector """
+    """
+        A class used to represent Histogram of Oriented Gradients humans detector
+
+        Attributes
+        ----------
+        hog_descriptor : cv2.HOGDescriptor()
+            Histogram of Oriented Gradients descriptor used to detect people
+
+        Methods
+        -------
+        detect(frame: Any) -> Any
+            Detect human in frame using HOG people detection descriptor
+    """
     def __init__(self):
 
         self.hog_descriptor = cv2.HOGDescriptor()
         self.hog_descriptor.setSVMDetector(svmdetector=cv2.HOGDescriptor_getDefaultPeopleDetector())
 
     def detect(self, frame: Any) -> Any:
+        """Detect human in frame using HOG people detection descriptor
+
+            Parameters
+            ----------
+            frame : Any
+                frame to detect humans in
+
+            Returns
+            -------
+            Any
+                a frame with detected humans in bounding boxes
+        """
         bboxes, weights = self.hog_descriptor.detectMultiScale(frame, winStride=(4, 4), padding=(8, 8), scale=1.03)
         bboxes = np.array([[x, y, x + w, y + h] for (x, y, w, h) in bboxes])
         suppressed_detections = non_max_suppression(boxes=bboxes,

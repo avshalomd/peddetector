@@ -1,3 +1,6 @@
+# detectors hyper-parameters
 SUPPRESSION_OVERLAP_THRESHOLD = 0.65
+
+# design
 BBOXES_COLOR_RGB = (20, 200, 20)
 TEXT_COLOR_RGB = (255, 255, 255)
