@@ -134,12 +134,3 @@ def _save_as_video(frames: list[Any], file_path: str, frame_size: tuple[int, int
                           frameSize=frame_size)
     for frame in frames:
         out.write(frame)
-
-
-if __name__ == "__main__":
-    my_file_name = 'People_Walk.mp4'  # ['People_Walk2.mp4', 'Woman_Walk.mp4']
-    my_file_path = os.path.join('data', my_file_name)
-    my_output_file_name = os.path.splitext(my_file_name)[0] + '_detected.mp4'
-    my_output_file_path = os.path.join('output', my_output_file_name)
-
-    pedestrians_detector(file_path=my_file_path, show=True, save=True, output_file_path=my_output_file_path)
