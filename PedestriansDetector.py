@@ -65,7 +65,7 @@ def _get_frame_resize(video_capture: cv2.VideoCapture) -> tuple[int, int]:
 
         frame_width = int(frame_height / original frame ratio)
 
-        size = (frame_width, frame_height
+        size = (frame_width, frame_height)
 
         Parameters
         ----------
