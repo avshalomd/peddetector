@@ -20,10 +20,14 @@ pedestrians_detector(file_path=input_file_path, show=True, save=True)
 
 ### Script Usage
 #### Example
-`peddetector.py data/People_Walk.mp4 --show --save`
+```bash
+peddetector.py data/People_Walk.mp4 --show --save
+```
 
 #### Help Menu
-`peddetector.py -h`
+```bash
+peddetector.py -h
+```
 
 ### Usage Notes
 * press `q` to quit and terminate detection during processing.
