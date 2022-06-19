@@ -45,7 +45,7 @@ peddetector.py -h
 `TEXT_COLOR_RGB`: RGB coded color of the text on the detection bounding boxes (tuple[int, int, int], e.g. (20, 200, 20)/(255, 255, 255))
 
 ## TODOs
-* implement Faster-RCNN / YOLO based detectors [option 1](https://github.com/open-mmlab/mmtracking) [option 2](https://github.com/deepakcrk/yolov5-crowdhuman)
+* implement [Faster-RCNN](https://github.com/open-mmlab/mmtracking) / [YOLO](https://github.com/deepakcrk/yolov5-crowdhuman) based detectors
 * implement evaluation methodology and metrics (accuracy, fps, etc.)
 * evaluate multiple detectors models
 * results visualization system
