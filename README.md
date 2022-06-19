@@ -44,3 +44,4 @@ pedestrians_detector(file_path=input_file_path, show=True, save=True)
 * evaluate multiple detectors models
 * results visualization system
 * unit tests
+* make pip installable
